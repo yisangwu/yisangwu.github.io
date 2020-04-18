@@ -51,7 +51,10 @@ roundcubemail 是支持多域名登录, 但是默认是未开启。 Baidu 无解
 $config['username_domain'] = 'a.com';
 ```
 
-支持多域名登录, 只需要修改配置 /opt/www/roundcubemail/config/config.inc.php，
+支持多域名登录, 只需要修改配置:
+```shell
+/opt/www/roundcubemail/config/config.inc.php
+```
 
 * <span style="color:red">多域名对应不同的邮件服务器</span>，即域名指向的公网IP不同 (也可以一个邮件服务器绑定多个公网IP）：  
     ```php
