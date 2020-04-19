@@ -20,7 +20,7 @@ categories: iRedMail
 > 一个比较好的习惯：在screen分屏下安装iredmail，避免因网络突然掉线或者终端被关掉等等原因，造成安装过程被中断。  
 
 ``` shell
-$ screen -S 会话名   #　创建会话
+$ screen -S 会话名   #　创建会话，使用root，因为是root权限安装
 ```
 
 #### 安装注意事项：
@@ -28,7 +28,7 @@ $ screen -S 会话名   #　创建会话
 1. 禁用 SELinux：
   * 永久关闭Selinux,：  
   ```shell
-  root账号修改/etc/selinux/config，设置SELINUX=disabled（需要重启机器生效配置）。
+  root权限修改/etc/selinux/config，设置SELINUX=disabled（需要重启机器生效配置）。
   ```
   * 临时关闭Selinux，服务器重启后失效：
     ```shell

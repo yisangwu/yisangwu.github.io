@@ -88,7 +88,7 @@ server {
 ### django-hosts实现：
 1. pip 安装 django-hosts， 这里用到的是 4.0版本：
 ```shell
-    $ pip install django-hosts==4.0
+    $ pip install django-hosts==4.0  # root权限
 ```
 2. 修改settings.py：
     - 将django-hosts添加到app：
@@ -142,7 +142,7 @@ server {
         host('task', 'task.urls', name='task'),
     )
 ``` 
- 
+
 4. 路由配置urls.py，添加路由对应的appname（app名称）, namespace(域名)：
 ```python
     urlpatterns = [
@@ -158,8 +158,8 @@ server {
   - 检查nginx的配置有效性，重载nginx;
   - 动态更新Web服务 或 在 supervisorctl重启Web服务；  
 ```shell
-$ kill -HUP PID
-$ supervisorctl restart program_name服务名
+$ kill -HUP PID  # root权限
+$ supervisorctl restart program_name服务名  # root权限
 ```
 
 6. 检查子域名的访问，app对应的路由，静态资源访问等是否正常；
