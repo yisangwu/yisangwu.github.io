@@ -141,9 +141,19 @@ server {
         host('doc', 'doc.urls', name='doc'),
         host('task', 'task.urls', name='task'),
     )
-```  
+``` 
+ 
+4. 路由配置urls.py，添加路由对应的appname（app名称）, namespace(域名)：
+```python
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include(('sso.urls', 'sso'), namespace='sso')),  # 默认sso
+        path('doc', include(('doc.urls', 'doc'), namespace='doc')),  # 文档
+        path('task', include(('task.urls', 'task'), namespace='task')),  # 需求
+    ]
+```
 
-4. reload 重载服务：
+5. reload 重载服务：
   - DNS 确认子域名的解析;
   - 检查nginx的配置有效性，重载nginx;
   - 动态更新Web服务 或 在 supervisorctl重启Web服务；  
@@ -152,4 +162,4 @@ $ kill -HUP PID
 $ supervisorctl restart program_name服务名
 ```
 
-5. 检查子域名的访问，app对应的路由，静态资源访问等是否正常；
+6. 检查子域名的访问，app对应的路由，静态资源访问等是否正常；
