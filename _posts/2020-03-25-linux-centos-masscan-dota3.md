@@ -98,10 +98,13 @@ $ crontab  -r -u user_web
 $ ps -ef | grep user_web
 user_web      25408     1  0 00:14 ?        00:00:00 /tmp/.X25-unix/.rsync/c/lib/64/tsm --library-path /tmp/.X25-unix/.rsync/c/lib/64/ /tmp/.X25-unix/.rsync/c/tsm64 -t 515 -f 1 -s 12 -S 10 -p 0 -d 1 p ip
 root     32695 30901  0 01:06 pts/1    00:00:00 grep --color=auto user_web
-user_web      18775     1  0 Mar25 ?        00:00:08 rsync
-user_web      18790     1 99 Mar25 ?        00:40:06 ./kswapd0
 ```
 找到了user_web执行的进程，脚本文件所在的路径，在 /tmp/ 目录下的隐藏文件。
+
+先杀掉进程：
+```shell
+$ kill -9 25408
+```
 进入目录：
 ```shell
 $ cd /tmp/
@@ -131,7 +134,7 @@ root      31799 30901  0 01:53 pts/1  00:00:00 grep --color=auto sh
 ```shell
 $ ll /proc/25403 
 ```
-找到进程脚本路径，删掉脚本文件所在的文件夹：
+找到进程脚本路径，杀掉进程，再删掉脚本文件所在的文件夹：
 
 至此，清理完毕。
 
