@@ -14,7 +14,8 @@ categories: git
 #### >>  使用中的一些问题：
 
 1. 使用SSH keys 免密操作git：
-   linux使用xshell等SSH客户端，windows使用Git Bash：
+   - linux使用xshell等SSH客户端
+   - windows使用Git Bash：
 ```shell
    $ ssh-keygen -t rsa -C "yisangwu@hao123.com"  -b 4096  # 使用git账号生成密钥
    $ cat ~/.ssh/id_rsa.pub  # 复制公钥，添加到个人设置的ssh key里面。
@@ -38,6 +39,7 @@ $ git pull origin branch_name --allow-unrelated-histories
 ```
 5. git clone --depth=1 远程分支看不到的问题：
 > 有些git仓库代码过大，达到几个G，初始化clone或者fetch分支时，经常timeout，或者bad header。即使修改了git的配置，还是会出现拉取失败！！
+
 ```shell
 # depth指定克隆深度,为1即表示只克隆最近一次commit
 $ git clone --depth 1 https://git123.com/group_name/coder.git
