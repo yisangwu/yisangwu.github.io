@@ -11,7 +11,7 @@ categories: git
 是git的一种很好用的可视化工具，收费的。可以注册非商业用途免费使用。[注册地址](https://www.syntevo.com/cn/smartgit/register-non-commercial)
 ><p>注意，使用git仓库用户的邮箱注册。如果注册邮箱和git仓库的用户邮箱不一致，会出现弹窗。</p>
 
-#### >>  使用中的一些问题：
+#### >>  git使用中的一些问题：
 
 1. 使用SSH keys 免密操作git：
    - linux使用xshell等SSH客户端
