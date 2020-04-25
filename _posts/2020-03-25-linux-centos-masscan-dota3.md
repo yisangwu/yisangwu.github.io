@@ -42,10 +42,12 @@ URL链接：http://45.55.129.23/dota3.tar.gz
 ```
 ***
 
-root账号，登录服务器，排查问题。
+<span style="font-size: 40px;color: red">root账号，登录服务器，排查问题。</span>
 
 查看服务器有无可疑的TCP端口：
+```shell
 $ netstat -lnpt
+```
 没有发现非常用端口。
 
 根据告警信息，拿进程id找对应的进程，一个都没有找到。
@@ -53,7 +55,7 @@ $ netstat -lnpt
 ### 一、立刻做几个操作：
 1. 修改web_user密码（当前服务器除了root，就只有web_user授权ssh登录）；
 2. 修改root密码，禁止root的ssh登录（只能先登录web_user，再切到root账号）；
-3. 清掉/root/.ssh/authorized_keys 里面所有公钥（禁止所有密钥登录）；
+3. 清掉root, web_user 目录下.ssh/authorized_keys 里面所有公钥（禁止所有密钥登录）；
 
 然后，再一步步来查。
 <p>没有找到对应的进程，看下是不是有crontab，定时执行，执行完进程就退出，找不到告警时的进程id。</p>
