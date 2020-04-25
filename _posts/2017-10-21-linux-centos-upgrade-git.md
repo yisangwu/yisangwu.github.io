@@ -10,8 +10,9 @@ categories: git
 
 服务器上的git版本太低了，还停留在古老的版本1.8.3.1，今天抽空升级了版本。
 
-git官方源码下载地址：
-https://www.kernel.org/pub/software/scm/git/
+- git官方地址：<https://git-scm.com/>
+
+- git各个版本源码的下载地址：<https://www.kernel.org/pub/software/scm/git/>
 
 ### 升级步骤, root权限操作：
 
