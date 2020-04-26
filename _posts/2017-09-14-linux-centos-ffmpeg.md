@@ -23,9 +23,9 @@ ffmpeg主要组成部分：
 8. ffplay：简单的播放器，使用ffmpeg库解析和解码，通过SDL显示；  
 
 ### 官网及下载地址：
-- 官网： http://www.ffmpeg.org/  
-- 下载页面： http://www.ffmpeg.org/download.html
-- 各个版本源码下载地址： http://ffmpeg.org/releases/
+- 官网： <http://www.ffmpeg.org/>
+- 下载页面：<http://www.ffmpeg.org/download.html>
+- 各个版本源码下载地址： <http://ffmpeg.org/releases/>
 
 >下载FFmpeg，尽量下载安装最新版本, 此时版本选择3.2.4（"Hypatia"）。
 
@@ -84,9 +84,9 @@ $ make && make  install
 $ ffmpeg
 ```
 ***
-### PHP使用ffpmpeg：
+### PHP使用FFmpeg：
 
-<p>因使用ffpmpeg 是走命令执行的方式，所以，需要调整php.ini配置。修改disable_functions，根据使用的命令行执行函数，去掉相应的函数，exec或system。</p>
+<p>因使用 FFmpeg 是走命令执行的方式，所以，需要调整php.ini配置。修改disable_functions，根据使用的命令行执行函数，去掉相应的函数，exec或system。</p>
 修改完保存后, php-fpm要重新加载的配置, 执行命令重载配置：
 ```shell
 $ service php-fpm reload
