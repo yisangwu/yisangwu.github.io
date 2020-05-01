@@ -22,6 +22,7 @@ categories: git
 ```
 2. 本地项目，关联git远程仓库:
 ```shell
+```shell
 $ git init  # 初始化一个新本地仓库
 $ git remote add origin git_url  # 建立和远程仓库的连接
 $ git remote -v  # 查看远程地址
