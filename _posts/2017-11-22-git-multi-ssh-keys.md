@@ -62,13 +62,14 @@ Are you sure you want to continue connecting (yes/no)? yes
 ```shell
 $ git remote set-url origin git@github.com:<hello>/<xxx>.git
 ```
-6. 查看仓库状态信息： 
+6. 查看仓库状态信息：
 ```shell
-$ git status  
-On branch master  
-Your branch is up to date with 'origin/master'.  
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
+
 ```
 7. 拉取远程仓库代码：
 ```shell
