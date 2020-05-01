@@ -39,7 +39,6 @@ $ git pull origin branch_name --allow-unrelated-histories
 ```
 5. git clone --depth=1 远程分支看不到的问题：
 > 有些git仓库代码过大，达到几个G，初始化clone或者fetch分支时，经常timeout，或者bad header。即使修改了git的配置，还是会出现拉取失败！！
-
 ```shell
 # depth指定克隆深度,为1即表示只克隆最近一次commit
 $ git clone --depth 1 https://git123.com/group_name/coder.git
