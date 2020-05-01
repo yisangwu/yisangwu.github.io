@@ -11,7 +11,7 @@ categories: git
 <p>但是，有多个git仓库平台（主要是指host不同），像公司代码仓库，github仓库等，如果都要配置ssh keys就要解决rsa key覆盖的问题。</p>
 
 
-#### >>  本地配置多个git代码平台的ssh keys：
+####  本地配置多个git代码平台的ssh keys：
 > 环境：windows， 终端 Git Bash，已有ssh key的情况下，再次添加github 的ssh key。  
 
 ```shell
@@ -62,7 +62,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 ```shell
 $ git remote set-url origin git@github.com:<hello>/<xxx>.git
 ```
-6. 查看仓库状态信息：  
+6. 查看仓库状态信息： 
 ```shell
 $ git status  
 On branch master  
