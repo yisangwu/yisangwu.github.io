@@ -43,7 +43,6 @@ $ touch ~/.ssh/config
   - 编辑config文件，添加github.com的路由策略：
 ```shell
 $ vim ~/.ssh/config
-
 # github
 Host github.com
     HostName github.com
@@ -51,9 +50,7 @@ Host github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/github_rsa  # github账号生成的ssh key 私钥
 ```
-
 3. 将公钥 github_rsa.pub 添加到 github的settings/keys下。
-
 4. 测试ssh是否配置成功：
 ```shell
 $ ssh -T git@github.com  # -T 不显示终端，只显示连接成功信息
