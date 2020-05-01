@@ -12,7 +12,7 @@ categories: git
 
 
 #### >>  本地配置多个git代码平台的ssh keys：
-> 环境：windows， 已有ssh key的情况下，再次添加github 的ssh key。  
+> 环境：windows， 终端 Git Bash，已有ssh key的情况下，再次添加github 的ssh key。  
 
 ```shell
 $ ll  # 当前环境已存在ssh key
