@@ -64,9 +64,9 @@ $ git remote set-url origin git@github.com:<hello>/<xxx>.git
 ```
 6. 查看仓库状态信息：  
 ```shell
-$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+$ git status  
+On branch master  
+Your branch is up to date with 'origin/master'.  
 
 nothing to commit, working tree clean
 ```
