@@ -6,3 +6,4 @@ vendor
 !.gitignore
 _drafts
 Gemfile.lock
+sitemap.xml
