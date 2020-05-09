@@ -85,9 +85,9 @@ $ systemctl status tinyproxy
 代理不可用，业务访问超时无响应,  重启 tinyproxy问题解决。  
 查看日志，有如下记录：
 ```shell
-NOTICE    May 09 19:08:33 [17728]: Waiting servers (0) is less than MinSpareServers (5). Creating new child.
-NOTICE    May 09 19:08:38 [17728]: Waiting servers (0) is less than MinSpareServers (5). Creating new child.
-NOTICE    May 09 19:08:43 [17728]: Waiting servers (0) is less than MinSpareServers (5). Creating new child.
+NOTICE    May 01 19:08:33 [17728]: Waiting servers (0) is less than MinSpareServers (5). Creating new child.
+NOTICE    May 01 19:08:38 [17728]: Waiting servers (0) is less than MinSpareServers (5). Creating new child.
+NOTICE    May 01 19:08:43 [17728]: Waiting servers (0) is less than MinSpareServers (5). Creating new child.
 ```
 意思是当前服务器无空闲进程可用。查看业务访问数据，实际上却没有太多的代理访问。
 安装tinyproxy时没有调整日志级别，用的是默认的：
