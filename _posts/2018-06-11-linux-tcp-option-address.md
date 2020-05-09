@@ -24,7 +24,7 @@ listen tcp-frontend
     option tcplog
     server tcp-backend 192.168.123.60:8577 send-proxy 
 ```
-<p>加了send-proxy后，第一次socket连接时，服务端会收到proto协议： </p> 
+<p>加了send-proxy后，第一次socket连接时，服务端会收到proxy协议： </p> 
 ```shell  
 PROXY TCP4 192.168.123.55 192.168.123.77 52505 8577 
 PROXY TCP6 ... .. ... ... 
