@@ -22,9 +22,9 @@ categories: php
 ### 1. wampServer 修改配置，添加Xdebug扩展：
   修改 F:/wamp64/bin/php/php5.6/phpForApache.ini
  添加xdebug扩展配置，重启wampserver服务；
-> 注意：
->>修改的是apache使用的php配置  
->>使用的是zend_extension
+>注意：  
+>修改的是apache使用的php配置  
+>使用的是zend_extension  
 ```shell
 [xdebug]
 zend_extension="F:/wamp64/bin/php/php5.6/zend_ext/php_xdebug.dll"
