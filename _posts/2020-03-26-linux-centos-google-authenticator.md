@@ -18,13 +18,13 @@ $ yum list | grep authenticator
 ```
 
 Linux (apk, rpm, tgz)下载地址：
-https://pkgs.org/download/google-authenticator
+<https://pkgs.org/download/google-authenticator>
 
 #### 1. 下载Google Authenticator对应服务器版本的rpm软件包：
-$ wget http://download-ib01.fedoraproject.org/pub/epel/6/x86_64/Packages/g/google-authenticator-0-0.3.20110830.hgd525a9bab875.el6.x86_64.rpm
+$ wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/g/google-authenticator-1.04-1.el7.x86_64.rpm
 
 #### 2. 安装：
-$ rpm -ivUh google-authenticator-0-0.3.20110830.hgd525a9bab875.el6.x86_64.rpm
+$ rpm -ivUh google-authenticator-1.04-1.el7.x86_64.rpm
 
 #### 3. 查看是否安装：
 $ yum list installed  | grep google

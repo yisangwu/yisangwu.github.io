@@ -15,7 +15,7 @@ categories: php
 ### 下载地址：
 - Xdebug官网： <https://xdebug.org/>
 - sublime text 的 xdebug扩展：
-https://packagecontrol.io/packages/Xdebug%20Client
+<https://packagecontrol.io/packages/Xdebug%20Client>
 
 
 下载对应PHP版本的xdebug扩展，windows下使用dll后缀
@@ -117,7 +117,7 @@ xdebug.remote_log 日志中的l排查：
  # Named entity
     else:
         try:
-            # Following are not needed to be converted for XML
+            # Following are not needed to 《be converted for XML
             if text[1:-1] == 'amp' or text[1:-1] == 'gt' or text[1:-1] == 'lt':
                 pass
             elif text[1:-1] == 'quot':  # 新增
