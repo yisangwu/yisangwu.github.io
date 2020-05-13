@@ -54,14 +54,14 @@ $ vim /etc/ssh/sshd_config
   ChallengeResponseAuthentication yes
 ```
 
-切到需要使用Google身份验证器的账号，执行命令：
+#### 6. 切到需要使用Google身份验证器的账号，执行命令：
 ```shell
 $ google-authenticator
 ```
 > 手机安装google authenticator， 在google_authenticator软件中扫描服务器上面的二维码，添加认证信息配置。
 >>注意保存二维码图片，和紧急备用code
 
-#### 6. root重启sshd服务，使配置生效：
+#### 7. root重启sshd服务，使配置生效：
 ```shell
 $ service sshd restart
 ```
