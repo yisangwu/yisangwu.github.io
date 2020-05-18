@@ -1,6 +1,6 @@
 ---
 layout: post
-title: php使用RSA私钥公钥加密校验
+title: php使用RSA私钥公钥签名校验
 tags: php, rsa
 categories: php
 ---
