@@ -110,9 +110,9 @@ xdebug.remote_log 日志中的l排查：
        解决：  
        在sublime控制台看到有报错，python解析xml错误，对应的脚本是protocol.py；  
 
-      找到：C:\Users\tencent\AppData\Roaming\Sublime Text\Installed Packages  
-       使用360 压缩直接打开：Xdebug Client.sublime-package
-       编辑文件：Xdebug Client.sublime-package\xdebug\protocol.py
+  找到：C:\Users\tencent\AppData\Roaming\Sublime Text\Installed Packages  
+  使用360 压缩直接打开：Xdebug Client.sublime-package
+  编辑文件：Xdebug Client.sublime-package\xdebug\protocol.py
 ```python
  # Named entity
     else:
