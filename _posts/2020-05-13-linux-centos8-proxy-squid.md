@@ -91,7 +91,7 @@ $ systemctl restart squid # 重启 squid
 ```
 ---
 
-进阶配置，只允许指定IP使用squid：
+## 进阶配置，只允许指定IP使用squid：
 
 1. 创建ip白名单文件，/etc/squid/squid_allow_ips， 每个ip一行，注意文件的用户和组权限（ squid.root）：
 ```shell
