@@ -56,3 +56,50 @@ ln -sf /usr/local/openresty/nginx/sbin/nginx /usr/local/openresty/bin/openresty
 $ /usr/local/openresty/bin/openresty -v
 nginx version: openresty/1.15.8.3
 ```
+
+8. 启动：
+```shell
+检验配置
+/usr/local/openresty/bin/openresty -t
+启动
+/usr/local/openresty/bin/openresty
+停止
+/usr/local/openresty/bin/openresty -s stop
+重新加载配置
+/usr/local/openresty/bin/openresty -s reload
+```
+
+9. 配置/lib/systemd/system/openresty.service，通过systemctl启动：
+
+```shell
+[Unit]
+Description=openresty - high performance web server
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/openresty/bin/openresty -c /usr/local/openresty/nginx/conf/nginx.conf
+ExecReload=/usr/local/openresty/bin/openresty -s reload
+ExecStop=/usr/local/openresty/bin/openresty -s stop
+
+[Install]
+WantedBy=multi-user.target
+```
+
+添加openresty.service后，是配置生效：
+```shell
+# systemctl daemon-reload
+```
+
+然后，就可以使用systemctl管理openresty:
+
+```shell
+启动
+systemctl start openresty
+停止
+systemctl stop openresty
+重载配置
+systemctl reload openresty
+重启
+systemctl restart openresty
+```
