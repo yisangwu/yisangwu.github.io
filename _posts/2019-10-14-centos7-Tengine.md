@@ -1,11 +1,9 @@
-
 ---
 layout: post
-title: CentOS7 安装淘宝 Tengine，健康检查负载均衡
-tags: linux, centos, Tengine, nginx
-categories: centos
+title: git 配置多个ssh key账户
+tags: git CentOS
+categories: git
 ---
-
 
 Tcp代理加负载均衡走了Haproxy后，  
 Http的代理和负载均衡，想换个方式，nginx也可以做，但是健康检查太被动了，失败了才发现异常，然后再切换。并不是真正意义上的健康检查。
