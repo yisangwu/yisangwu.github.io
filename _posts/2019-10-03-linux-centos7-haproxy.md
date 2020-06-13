@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CentOS7安装Haproxy
+title: CentOS7安装Haproxy，实现Tcp四层负载均衡
 tags: linux, centos, haproxy
 categories: centos
 ---
