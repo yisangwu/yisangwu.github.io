@@ -1,8 +1,8 @@
 ---
 layout: post
-title: git 配置多个ssh key账户
-tags: git CentOS
-categories: git
+title: CentOS7 安装 淘宝Tengine，健康检查负载均衡
+tags: centos,tengine,nginx
+categories: centos
 ---
 
 Tcp代理加负载均衡走了Haproxy后，  
