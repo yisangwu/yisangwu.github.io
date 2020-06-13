@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: CentOS7 安装 淘宝Tengine，健康检查负载均衡
+title: CentOS7 安装淘宝 Tengine，健康检查负载均衡
 tags: linux, centos, Tengine, nginx
 categories: centos
 ---
