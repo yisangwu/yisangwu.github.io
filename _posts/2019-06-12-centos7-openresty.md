@@ -86,20 +86,20 @@ ExecStop=/usr/local/openresty/bin/openresty -s stop
 WantedBy=multi-user.target
 ```
 
-添加openresty.service后，是配置生效：
+添加openresty.service后，使配置文件生效：
 ```shell
-# systemctl daemon-reload
+$ systemctl daemon-reload
 ```
 
 然后，就可以使用systemctl管理openresty:
 
 ```shell
 启动
-systemctl start openresty
+$ systemctl start openresty
 停止
-systemctl stop openresty
+$ systemctl stop openresty
 重载配置
-systemctl reload openresty
+$ systemctl reload openresty
 重启
-systemctl restart openresty
+$ systemctl restart openresty
 ```
