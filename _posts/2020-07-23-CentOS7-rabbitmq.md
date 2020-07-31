@@ -1,6 +1,6 @@
 ---
 layout: post
-title: centOS7安装rabbitmq3.8.5
+title: CentOS7安装rabbitmq3.8.5
 tags: centos, rabbitmq
 categories: centos
 ---
