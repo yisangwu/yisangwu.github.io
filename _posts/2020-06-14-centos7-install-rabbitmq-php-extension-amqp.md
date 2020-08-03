@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CentOS7安装RabbitMQ的PHP扩展amqp==1.10.
+title: CentOS7安装RabbitMQ的PHP扩展amqp==1.10.2
 tags: centos,linux,php, rabbitmq, amqp
 categories: php
 ---
@@ -117,8 +117,8 @@ drwxr-xr-x 3 root root 118 Aug  3 10:28 lib64
 ```
 复制一份lib64 为lib：
 ```shell
-[root@fuckqiu amqp-1.10.2]# cp -R /usr/local/rabbitmq-c-0.10.0/lib64/ /usr/local/rabbitmq-c-0.10.0/lib/
-[root@fuckqiu amqp-1.10.2]# ll /usr/local/rabbitmq-c-0.10.0/
+# cp -R /usr/local/rabbitmq-c-0.10.0/lib64/ /usr/local/rabbitmq-c-0.10.0/lib/
+# ll /usr/local/rabbitmq-c-0.10.0/
 total 0
 drwxr-xr-x 2 root root  92 Aug  3 10:28 include
 drwxr-xr-x 3 root root 118 Aug  3 10:38 lib
