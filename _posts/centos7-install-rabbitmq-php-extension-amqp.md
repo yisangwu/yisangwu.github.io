@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CentOS7安装RabbitMQ的PHP扩展amqp==1.10.
+title: CentOS7安装RabbitMQ的PHP扩展amqp==1.10.2
 tags: centos,linux,php, rabbitmq, amqp
 categories: php
 ---
