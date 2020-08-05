@@ -95,11 +95,11 @@ tcp6       0      0 :::873                  :::*                    LISTEN      
 ```
 ### 四. Mysql服务器，创建备份用户：
 
-3.1 使用mysql的root账号，进入终端：
+4.1 使用mysql的root账号，进入终端：
 ```shell
 [root]#mysql -u root -p
 ```
-3.2 创建mysqldump用户，建议和业务数据库用户区分开, GRANT权限可以调整，注意一定不要 GRANT ALL:
+4.2 创建mysqldump用户，建议和业务数据库用户区分开, GRANT权限可以调整，注意一定不要 GRANT ALL:
 ```mysql
 mysql> use mysql -A;
 mysql> CREATE USER 'mysql_backup'@'localhost' identified by "Backup@Abc123";
@@ -114,7 +114,7 @@ mysql> FLUSH PRIVILEGES;
 ```
 5.2 创建密码文件：
 ```shell
-[root]# echo 'Backup@Abc123'>/etc/rsyncd.passwd
+[root]# echo 'Rsync@123'>/etc/rsyncd.passwd
 ```
 5.3 修改密码文件权限，为仅root读写：
 ```shell
@@ -122,7 +122,7 @@ mysql> FLUSH PRIVILEGES;
 ```
 
 ### 六. Mysql服务器，创建备份脚本：
-5.1 创建备份脚本，可以根据业务实际情况，修改：
+6.1 创建备份脚本，可以根据业务实际情况，修改：
 
 ``` shell
 [root opt]# vim /opt/mysql_backup.sh
@@ -152,20 +152,20 @@ nohup rsync -az --include="*.gz" --exclude=* --password-file=/etc/rsyncd.passwd 
 > c. --include="*.gz" 只同步gz后缀得文件，脚本等其他文件不同步  
 > d. --exclude=* 排除目录下所有文件， 注意exclude 必须在 include后面
 
-5.2 修改/opt/mysql_backup.sh脚本可执行：
+6.2 修改/opt/mysql_backup.sh脚本可执行：
 ```shell
 [root]#chmod +x /opt/mysql_backup.sh
 ```
 
 ### 七. Mysql服务器，测试脚本，添加crontab：
 
-6.1 测试脚本，查看远程备份服务器的文件：
+7.1 测试脚本，查看远程备份服务器的文件：
 ```shell
 [root]#/opt/mysql_backup.sh
 ```
 > 在远程服务器，mysql模块对应的目录，rsync文件传输中是隐藏文件，要使用 ll -la 查看。
 
-6.2 添加定时脚本：
+7.2 添加定时脚本：
 ```shell
 [root]# crontab -e
 #mysql remote backup
