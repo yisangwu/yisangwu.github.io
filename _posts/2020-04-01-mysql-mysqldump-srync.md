@@ -157,7 +157,7 @@ nohup rsync -az --include="*.gz" --exclude=* --password-file=/etc/rsyncd.passwd 
 [root]#chmod +x /opt/mysql_backup.sh
 ```
 
-### 六. Mysql服务器，测试脚本，添加crontab：
+### 七. Mysql服务器，测试脚本，添加crontab：
 
 6.1 测试脚本，查看远程备份服务器的文件：
 ```shell
