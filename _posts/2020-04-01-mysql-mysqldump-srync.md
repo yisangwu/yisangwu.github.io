@@ -114,7 +114,7 @@ mysql> FLUSH PRIVILEGES;
 ```
  - 创建密码文件：
 ```shell
-[root]# echo 'XGoda@123'>/etc/rsyncd.passwd
+[root]# echo 'Backup@Abc123'>/etc/rsyncd.passwd
 ```
  - 修改密码文件权限，为仅root读写：
 ```shell
