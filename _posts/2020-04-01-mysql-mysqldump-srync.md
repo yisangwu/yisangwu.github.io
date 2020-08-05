@@ -108,15 +108,15 @@ mysql> FLUSH PRIVILEGES;
 ```
 
 ### 五. Mysql服务器，部署rsync：
- - 安装rsync：
+5.1 安装rsync：
 ```shell
 [root]# yum install -y rsync
 ```
- - 创建密码文件：
+5.2 创建密码文件：
 ```shell
 [root]# echo 'Backup@Abc123'>/etc/rsyncd.passwd
 ```
- - 修改密码文件权限，为仅root读写：
+5.3 修改密码文件权限，为仅root读写：
 ```shell
 [root]# chmod 600 /etc/rsyncd.passwd
 ```
