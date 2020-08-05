@@ -106,7 +106,22 @@ mysql> CREATE USER 'mysql_backup'@'localhost' identified by "Backup@Abc123";
 mysql> GRANT SELECT, RELOAD, REPLICATION CLIENT, SHOW VIEW, TRIGGER ON *.* TO 'mysql_backup'@'localhost';
 mysql> FLUSH PRIVILEGES;
 ```
-### 五. Mysql服务器，创建备份脚本：
+
+### 五. Mysql服务器，部署rsync：
+ - 安装rsync：
+```shell
+[root]# yum install -y rsync
+```
+ - 创建密码文件：
+```shell
+[root]# echo 'XGoda@123'>/etc/rsyncd.passwd
+```
+ - 修改密码文件权限，为仅root读写：
+```shell
+[root]# chmod 600 /etc/rsyncd.passwd
+```
+
+### 六. Mysql服务器，创建备份脚本：
 5.1 创建备份脚本，可以根据业务实际情况，修改：
 
 ``` shell
