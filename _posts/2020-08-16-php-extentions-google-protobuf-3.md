@@ -160,7 +160,7 @@ foreach ($login_rsp->getLoginNum() as $key => $value) {
 echo 'login_num: ', implode(',', $login_num), PHP_EOL;
 ```
 
-输入结果如下：
+输出结果如下：
 ```shell
 # php -f test_proto.php
 
