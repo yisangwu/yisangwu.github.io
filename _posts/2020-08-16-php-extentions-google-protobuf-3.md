@@ -107,7 +107,6 @@ message LoginReq{
 ```php
 # cat test_proto.php
 <?php
-<?php
 
 defined('DS') or define('DS', DIRECTORY_SEPARATOR);
 /**
