@@ -10,10 +10,10 @@ Copyright (c) The PHP Group
 Zend Engine v3.4.0, Copyright (c) Zend Technologies
     with Xdebug v2.9.2, Copyright (c) 2002-2020, by Derick Rethans
 
-|  表头   | 表头  |
-|  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
+|  常量   | 数值  | 数值  | 数值  | 数值  | 数值  |
+|  ----  | ----  | 数值  | 数值  | 数值  | 数值  |
+| 单元格  | 单元格 | 数值  | 数值  | 数值  | 数值  |
+| 单元格  | 单元格 | 数值  | 数值  | 数值  | 数值  |
 
 ## windows下：
 | 常量 | 数值 | 说明 | socket_recv | socket_send |
