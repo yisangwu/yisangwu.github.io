@@ -13,7 +13,6 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 
 ## windows下：
 | 常量 | 数值 | 说明 | socket_recv | socket_send |
-| :------- | ------- | :------- | ------- | ------- |
 |MSG_OOB        |1|处理超出边界的数据。|√|√|
 |MSG_PEEK       |2|从接受队列的起始位置接收数据，但不将他们从接受队列中移除。|√|-|
 |MSG_WAITALL    |8|在接收到至少 len 字节的数据之前，造成一个阻塞，并暂停脚本运行（block）。但是， 如果接收到中断信号，或远程服务器断开连接，该函数将返回少于 len 字节的数据。|√|-|
