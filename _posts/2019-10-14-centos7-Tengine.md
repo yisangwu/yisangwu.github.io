@@ -99,6 +99,31 @@ $ nginx -s stop
 ```shell
 $ nginx -s reload
 ```
+______
 
-> 附： 
->> 健康检查的 Tengine配置，后续再写
+### 后记：
+可以使用nginx的 systemctl 管理tengine：  
+https://www.nginx.com/resources/wiki/start/topics/examples/systemd/  
+> 注意：
+> >先直接sbin/nginx启动 tengine，再添加 tengine.service ，因为PIDFile 不一致， systemctl 管理不了。  
+>正确的做法，是先添加 tengine.service， 再通过systemctl启动tengine。
+```shell
+[Unit]
+Description=The NGINX HTTP and reverse proxy server
+After=syslog.target network-online.target remote-fs.target nss-lookup.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStartPre=/usr/sbin/nginx -t
+ExecStart=/usr/sbin/nginx
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
